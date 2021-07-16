@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //Menggunakan cara 1
+        //Menggunakan cara 1 (ada bug)
 //        binding.btnCategory.setOnClickListener {
 //            Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_categoryFragment)
 //        }
