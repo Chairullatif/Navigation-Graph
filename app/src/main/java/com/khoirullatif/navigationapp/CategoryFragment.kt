@@ -44,10 +44,18 @@ class CategoryFragment : Fragment(), View.OnClickListener {
             R.id.rb_makan -> nameLifestyle = binding.rbMakan.text.toString()
             R.id.rb_tidur -> nameLifestyle = binding.rbTidur.text.toString()
         }
-        val bundle = Bundle()
-        bundle.putString(EXTRA_NAME, nameLifestyle)
-        bundle.putLong(EXTRA_DESC, 9)
-        p0?.findNavController()?.navigate(R.id.action_categoryFragment_to_detailCategoryFragment, bundle)
+
+        // INI MENGGUNAKAN SAFEARGS
+        val toDetailCategoryFragment = CategoryFragmentDirections.actionCategoryFragmentToDetailCategoryFragment()
+        toDetailCategoryFragment.name = nameLifestyle
+        toDetailCategoryFragment.level = 9
+        p0?.findNavController()?.navigate(toDetailCategoryFragment)
+
+        // INI MENGGUNAKAN BUNDLE
+//        val bundle = Bundle()
+//        bundle.putString(EXTRA_NAME, nameLifestyle)
+//        bundle.putLong(EXTRA_DESC, 9)
+//        p0?.findNavController()?.navigate(R.id.action_categoryFragment_to_detailCategoryFragment, bundle)
 
     }
 
