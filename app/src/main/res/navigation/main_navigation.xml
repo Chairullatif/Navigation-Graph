@@ -55,6 +55,11 @@
         <deepLink
             android:id="@+id/deepLink2"
             app:uri="https://www.chairullatif.com/detail/{name}/{level}" />
+        <action
+            android:id="@+id/action_detailCategoryFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
 </navigation>
