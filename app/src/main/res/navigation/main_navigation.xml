@@ -33,7 +33,11 @@
         android:id="@+id/profileActivity"
         android:name="com.khoirullatif.navigationapp.ProfileActivity"
         android:label="activity_profile"
-        tools:layout="@layout/activity_profile" />
+        tools:layout="@layout/activity_profile">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="https://www.chairullatif.com/profile" />
+    </activity>
 
     <fragment
         android:id="@+id/detailCategoryFragment"
